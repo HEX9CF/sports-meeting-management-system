@@ -1,6 +1,11 @@
 #ifndef UNIT_H
 #define UNIT_H
 
-void unitView();
+typedef struct {
+	int id;
+	int *name;
+} Unit;
+
+int unitView();
 
 #endif

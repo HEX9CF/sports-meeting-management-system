@@ -22,13 +22,14 @@
     <ClCompile Include="src\controller\AthleteController.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\model\Athlete.cpp" />
-    <ClCompile Include="src\model\Event.cpp" />
-    <ClCompile Include="src\model\Unit.cpp" />
     <ClCompile Include="src\view\AthleteView.cpp" />
+    <ClCompile Include="src\view\HomeView.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Athlete.h" />
     <ClInclude Include="include\Event.h" />
+    <ClInclude Include="include\Home.h" />
+    <ClInclude Include="include\main.h" />
     <ClInclude Include="include\Unit.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
