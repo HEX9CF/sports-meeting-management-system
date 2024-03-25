@@ -95,5 +95,8 @@
     <ClInclude Include="include\OrderBook.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="include\Setting.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

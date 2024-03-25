@@ -19,8 +19,8 @@ static void previewOrderBook() {
 	for (int i = 1; i <= *eventCount; i++) {
 		Event *e = queryEvent(i);
 		printf("比赛项目：%s\n", e->name);
-		printf("比赛类型：%s\n", getEventGenderStr(e));
-		printf("性别限定：%s\n", getEventTypeStr(e));
+		printf("比赛类型：%s\n", getEventTypeStr(e));
+		printf("性别限定：%s\n", getEventGenderStr(e));
 		char datetime[20];
 		strftime(datetime, 20, "%Y-%m-%d %H:%M:%S", &e->datetime);
 		printf("比赛时间：%s\n", datetime);
