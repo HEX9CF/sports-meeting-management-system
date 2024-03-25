@@ -92,5 +92,8 @@
     <ClInclude Include="include\Participation.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="include\OrderBook.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

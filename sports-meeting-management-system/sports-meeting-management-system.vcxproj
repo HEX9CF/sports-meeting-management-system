@@ -43,6 +43,7 @@
     <ClInclude Include="include\Event.h" />
     <ClInclude Include="include\Home.h" />
     <ClInclude Include="include\main.h" />
+    <ClInclude Include="include\OrderBook.h" />
     <ClInclude Include="include\Participation.h" />
     <ClInclude Include="include\Score.h" />
     <ClInclude Include="include\Unit.h" />

@@ -15,8 +15,9 @@ Main Header
 #include "Home.h"
 #include "Participation.h"
 #include "Score.h"
+#include "OrderBook.h"
 
-#define MAX_SIZE 100
+#define MAX_SIZE 1000
 #define MAX_LENGTH 100
 
 #endif

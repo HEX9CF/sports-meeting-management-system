@@ -30,6 +30,8 @@ static void addEventView() {
 		&e->datetime.tm_hour, &e->datetime.tm_min, &e->datetime.tm_sec);
 	e->datetime.tm_year -= 1900;
 	e->datetime.tm_mon -= 1;
+	printf("比赛场地：");
+	scanf_s("%s", e->location, MAX_LENGTH);
 	int id = addEvent(e);
 	if (~id) {
 		printf("添加成功^_^，ID：%d\n", id);
@@ -80,6 +82,8 @@ static void modifyEventView() {
 		&e->datetime.tm_hour, &e->datetime.tm_min, &e->datetime.tm_sec);
 	e->datetime.tm_year -= 1900;
 	e->datetime.tm_mon -= 1;
+	printf("比赛场地：");
+	scanf_s("%s", e->location, MAX_LENGTH);
 	bool ret = modifyEvent(id, e);
 	if (ret) {
 		printf("修改成功^_^\n");
@@ -109,6 +113,7 @@ static void queryEventView() {
 	char datetime[20];
 	strftime(datetime, 20, "%Y-%m-%d %H:%M:%S", &e->datetime);
 	printf("比赛时间：%s\n", datetime);
+	printf("比赛场地：%s\n", e->location);
 	system("pause");
 }
 

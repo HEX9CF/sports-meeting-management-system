@@ -12,6 +12,7 @@ Event* newEvent() {
 		return NULL;
 	}
 	e->name = (char*)malloc(MAX_LENGTH * sizeof(char));
+	e->location = (char*)malloc(MAX_LENGTH * sizeof(char));
 	return e;
 }
 

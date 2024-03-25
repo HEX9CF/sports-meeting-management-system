@@ -20,6 +20,7 @@ bool removeEvent(int id) {
 		return false;
 	}
 	free(eventList[id]->name);
+	free(eventList[id]->location);
 	free(eventList[id]);
 	eventList[id] = NULL;
 	return true;
