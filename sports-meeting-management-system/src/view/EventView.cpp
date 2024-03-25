@@ -108,8 +108,8 @@ static void queryEventView() {
 	}
 	printf("项目ID：%d\n", e->id);
 	printf("项目名称：%s\n", e->name);
-	printf("项目类型：%d（0.未知，1.田赛，2.竞赛，3.其他）\n", e->type);
-	printf("性别限定：%d（0.未知，1.男子，2.女子，3.其他，4.混合）\n", e->gender);
+	printf("比赛类型：%s\n", getEventGenderStr(e));
+	printf("性别限定：%s\n", getEventTypeStr(e));
 	char datetime[20];
 	strftime(datetime, 20, "%Y-%m-%d %H:%M:%S", &e->datetime);
 	printf("比赛时间：%s\n", datetime);

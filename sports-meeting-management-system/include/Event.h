@@ -26,4 +26,6 @@ Event* queryEvent(int id);
 Event* newEvent();
 Event** getEventList();
 int* getEventCount();
+const char* getEventGenderStr(Event* e);
+const char* getEventTypeStr(Event* e);
 #endif
