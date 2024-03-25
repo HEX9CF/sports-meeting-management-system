@@ -10,7 +10,7 @@ static void printMenu() {
 	printf("2. 删除比赛项目信息\n");
 	printf("3. 修改比赛项目信息\n");
 	printf("4. 查询所有比赛项目信息\n");
-	printf("5. 根据ID查询比赛项目信息\n");
+	printf("5. 根据比赛项目ID查询比赛项目信息\n");
 	printf("0. 返回上级菜单\n");
 	printf("请输入指令：");
 }
@@ -66,13 +66,13 @@ static void modifyEventView() {
 	printf("请输入要修改的比赛项目ID：");
 	scanf_s("%d", &id);
 	if (!queryEvent(id)) {
-		printf("未找到该比赛项目\n");
+		printf("发生错误，比赛项目不存在\n");
 		system("pause");
 		return;
 	}
 	Event* e = newEvent();
 	printf("请输入要修改的比赛项目信息：\n");
-	printf("项目名：");
+	printf("项目名称：");
 	scanf_s("%s", e->name, MAX_LENGTH);
 	printf("项目类型（0.未知，1.田赛，2.竞赛，3.其他）：");
 	scanf_s("%d", &(e->type));

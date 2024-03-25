@@ -54,7 +54,7 @@ static void modifyUnitView() {
 	printf("请输入要修改的单位ID：");
 	scanf_s("%d", &id);
 	if (!queryUnit(id)) {
-		printf("未找到该单位\n");
+		printf("发生错误，单位不存在\n");
 		system("pause");
 		return;
 	}

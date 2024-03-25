@@ -9,7 +9,7 @@ static void printMenu() {
 	printf("1. 添加参赛信息\n");
 	printf("2. 删除参赛信息\n");
 	printf("3. 修改参赛信息\n");
-	printf("4. 查询参赛信息\n");
+	printf("4. 根据参赛信息ID查询参赛信息\n");
 	printf("0. 返回上级菜单\n");
 	printf("请输入指令：");
 }
@@ -69,7 +69,7 @@ static void modifyParticipationView() {
 	printf("请输入要修改的参赛信息ID：");
 	scanf_s("%d", &id);
 	if (!queryParticipation(id)) {
-		printf("未找到该参赛信息\n");
+		printf("发生错误，参赛信息不存在\n");
 		system("pause");
 		return;
 	}

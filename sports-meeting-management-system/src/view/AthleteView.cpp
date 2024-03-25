@@ -9,7 +9,7 @@ static void printMenu() {
 	printf("1. 添加运动员信息\n");
 	printf("2. 删除运动员信息\n");
 	printf("3. 修改运动员信息\n");
-	printf("4. 查询运动员信息\n");
+	printf("4. 根据运动员ID查询运动员信息\n");
 	printf("0. 返回上级菜单\n");
 	printf("请输入指令：");
 }
@@ -60,7 +60,7 @@ static void modifyAthleteView() {
 	printf("请输入要修改的运动员ID：");
 	scanf_s("%d", &id);
 	if (!queryAthlete(id)) {
-		printf("未找到该运动员\n");
+		printf("发生错误，运动员不存在\n");
 		system("pause");
 		return;
 	}
