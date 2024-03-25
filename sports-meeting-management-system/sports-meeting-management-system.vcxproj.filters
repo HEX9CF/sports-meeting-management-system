@@ -30,6 +30,24 @@
     <ClCompile Include="src\model\Athlete.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\view\EventView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\UnitView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\ScoreView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\ParticipationView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\model\Event.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\controller\EventController.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Athlete.h">
@@ -45,6 +63,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="include\Home.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Score.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Participation.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

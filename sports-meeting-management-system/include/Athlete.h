@@ -1,23 +1,28 @@
+/*
+Athlete Header
+*/
 #ifndef ATHLETE_H
 #define ATHLETE_H
 
 typedef struct {
+	int id;
 	char* name;
-	char* gender;
+	int gender; // 0.未知，1.男性，2.女性，3.其他
 	int age;
+	int unitId;
 }Athlete;
 
+// view
 void athleteView();
 
+// controller
 int addAthlete(Athlete *a);
 bool removeAthlete(int id);
 bool modifyAthlete(int id, Athlete *a);
 Athlete* queryAthlete(int id);
 
+// model
 Athlete* newAthlete();
-int insertAthleteList(Athlete *a);
-bool deleteAthleteList(int i);
-bool updateAthleteList(int i, Athlete *a);
-Athlete* selectAthleteList(int i);
-
+Athlete** getAthleteList(); 
+int* getAthleteCount();
 #endif

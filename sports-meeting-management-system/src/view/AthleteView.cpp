@@ -1,4 +1,7 @@
-﻿ #include "../../include/main.h"
+﻿/*
+Athlete View
+*/
+ #include "../../include/main.h"
 
 static void printMenu() {
 	system("cls");
@@ -18,10 +21,12 @@ static void addAthleteView() {
 	printf("请输入要添加的运动员信息：\n");
 	printf("姓名：");
 	scanf_s("%s", a->name, MAX_LENGTH);
-	printf("性别：");
-	scanf_s("%s", a->gender, MAX_LENGTH);
+	printf("性别（0.未知，1.男性，2.女性，3.其他）：");
+	scanf_s("%d", &(a->gender));
 	printf("年龄：");
 	scanf_s("%d", &(a->age));
+	printf("所属单位ID：");
+	scanf_s("%d", &(a->unitId));
 	int id = addAthlete(a);
 	if (~id) {
 		printf("添加成功^_^，ID：%d\n", id);
@@ -63,13 +68,15 @@ static void modifyAthleteView() {
 	printf("请输入要修改的运动员信息：\n");
 	printf("姓名：");
 	scanf_s("%s", a->name, MAX_LENGTH);
-	printf("性别：");
-	scanf_s("%s", a->gender, MAX_LENGTH);
+	printf("性别（0.未知，1.男性，2.女性，3.其他）：");
+	scanf_s("%d", &(a->gender));
 	printf("年龄：");
 	scanf_s("%d", &(a->age));
+	printf("所属单位ID：");
+	scanf_s("%d", &(a->unitId));
 	bool ret = modifyAthlete(id, a);
 	if (ret) {
-		printf("修改成功^_^\n", id);
+		printf("修改成功^_^\n");
 	}
 	else {
 		printf("修改失败\n");
@@ -89,10 +96,11 @@ static void queryAthleteView() {
 		system("pause");
 		return;
 	}
-	printf("ID：%d\n", id);
+	printf("运动员ID：%d\n", a->id);
 	printf("姓名：%s\n", a->name);
-	printf("性别：%s\n", a->gender);
+	printf("性别（0.未知，1.男性，2.女性，3.其他）：%d\n", a->gender);
 	printf("年龄：%d\n", a->age);
+	printf("所属单位ID：%d\n", a->age);
 	system("pause");
 }
 
@@ -116,7 +124,6 @@ void athleteView() {
 			queryAthleteView();
 			break;
 		case 0:
-			printf("返回上级菜单\n");
 			return;
 			break;
 		default:

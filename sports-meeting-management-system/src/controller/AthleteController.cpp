@@ -1,17 +1,45 @@
+/*
+Athlete Controller
+*/
 #include "../../include/main.h"
 
 int addAthlete(Athlete *a) {
-	return insertAthleteList(a);
+	Athlete** athleteList = getAthleteList();
+	int* pCount = getAthleteCount();
+	if (*pCount >= MAX_SIZE) {
+		return -1;
+	}
+	a->id = ++(*pCount);
+	athleteList[*pCount] = a;
+	return *pCount; 
 }
 
 bool removeAthlete(int id) {
-	return deleteAthleteList(id);
+	Athlete** athleteList = getAthleteList();
+	if (id < 0 || id >= MAX_SIZE || !athleteList[id]) {
+		return false;
+	}
+	free(athleteList[id]->name);
+	free(athleteList[id]);
+	athleteList[id] = NULL;
+	return true;
 }
 
 bool modifyAthlete(int id, Athlete *a) {
-	return updateAthleteList(id, a);
+	Athlete** athleteList = getAthleteList();
+	if (id < 0 || id >= MAX_SIZE || !athleteList[id]) {
+		return false;
+	}
+	free(athleteList[id]->name);
+	free(athleteList[id]);
+	athleteList[id] = a;
+	return true;
 }
 
 Athlete* queryAthlete(int id) {
-	return selectAthleteList(id);
+	Athlete** athleteList = getAthleteList();
+	if (id < 0 || id >= MAX_SIZE) {
+		return NULL;
+	}
+	return athleteList[id];
 }
