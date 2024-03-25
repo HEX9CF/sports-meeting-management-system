@@ -48,6 +48,18 @@
     <ClCompile Include="src\controller\EventController.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\model\Unit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\model\Score.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\model\Participation.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\controller\UnitController.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Athlete.h">

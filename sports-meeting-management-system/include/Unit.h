@@ -1,11 +1,25 @@
+/*
+Unit Header
+*/
 #ifndef UNIT_H
 #define UNIT_H
 
 typedef struct {
 	int id;
-	int *name;
+	char* name;
 } Unit;
 
-int unitView();
+// view
+void unitView();
 
+// controller
+int addUnit(Unit* a);
+bool removeUnit(int id);
+bool modifyUnit(int id, Unit* a);
+Unit* queryUnit(int id);
+
+// model
+Unit* newUnit();
+Unit** getUnitList();
+int* getUnitCount();
 #endif

@@ -21,9 +21,13 @@
   <ItemGroup>
     <ClCompile Include="src\controller\AthleteController.cpp" />
     <ClCompile Include="src\controller\EventController.cpp" />
+    <ClCompile Include="src\controller\UnitController.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\model\Athlete.cpp" />
     <ClCompile Include="src\model\Event.cpp" />
+    <ClCompile Include="src\model\Participation.cpp" />
+    <ClCompile Include="src\model\Score.cpp" />
+    <ClCompile Include="src\model\Unit.cpp" />
     <ClCompile Include="src\view\AthleteView.cpp" />
     <ClCompile Include="src\view\EventView.cpp" />
     <ClCompile Include="src\view\HomeView.cpp" />
