@@ -33,6 +33,7 @@
     <ClCompile Include="src\view\AthleteView.cpp" />
     <ClCompile Include="src\view\EventView.cpp" />
     <ClCompile Include="src\view\HomeView.cpp" />
+    <ClCompile Include="src\view\OrderBookView.cpp" />
     <ClCompile Include="src\view\ParticipationView.cpp" />
     <ClCompile Include="src\view\ScoreView.cpp" />
     <ClCompile Include="src\view\UnitView.cpp" />

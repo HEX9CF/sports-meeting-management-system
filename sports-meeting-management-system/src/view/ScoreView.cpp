@@ -19,8 +19,15 @@ static void addScoreView() {
 	system("cls");
 	printf("- 添加成绩信息 -\n");
 	printf("请输入要添加的成绩信息：\n");
+	int participationId;
 	printf("参赛信息ID：");
-	scanf_s("%d", &(s->participationId));
+	scanf_s("%d", &participationId);
+	if (!queryParticipation(participationId)) { 
+		printf("发生错误，参赛信息不存在\n");
+		system("pause");
+		return;
+	}
+	s->participationId = participationId;
 	printf("分数：");
 	scanf_s("%lf", &(s->score));
 	printf("排名：");
@@ -64,8 +71,15 @@ static void modifyScoreView() {
 	}
 	Score *s = newScore();
 	printf("请输入要修改的成绩信息：\n");
+	int participationId;
 	printf("参赛信息ID：");
-	scanf_s("%d", &(s->participationId));
+	scanf_s("%d", &participationId);
+	if (!queryParticipation(participationId)) {
+		printf("发生错误，参赛信息不存在\n");
+		system("pause");
+		return;
+	}
+	s->participationId = participationId;
 	printf("分数：");
 	scanf_s("%lf", &(s->score));
 	printf("排名：");
