@@ -52,6 +52,7 @@ void homeView() {
 			break;
 		default:
 			printf("未知指令\n");
+			system("pause");
 		}
 	} while (op != 0);
 }

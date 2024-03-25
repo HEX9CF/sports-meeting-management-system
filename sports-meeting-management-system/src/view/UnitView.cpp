@@ -113,6 +113,7 @@ void unitView() {
 			break;
 		default:
 			printf("ОґЦЄЦёБо\n");
+			system("pause");
 		}
 	} while (op != 0);
 }

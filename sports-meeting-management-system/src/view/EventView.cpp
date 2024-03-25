@@ -15,7 +15,7 @@ static void printMenu() {
 }
 
 static void addEventView() {
-	Event *e = newEvent();
+	Event* e = newEvent();
 	system("cls");
 	printf("- 添加比赛项目信息 -\n");
 	printf("请输入要添加的比赛项目信息：\n");
@@ -25,6 +25,11 @@ static void addEventView() {
 	scanf_s("%d", &(e->type));
 	printf("性别限定（0.未知，1.男子，2.女子，3.其他，4.混合）：");
 	scanf_s("%d", &(e->gender));
+	printf("比赛时间（年-月-日 时:分:秒）：");
+	scanf_s("%d-%d-%d %d:%d:%d", &e->datetime.tm_year, &e->datetime.tm_mon, &e->datetime.tm_mday,
+		&e->datetime.tm_hour, &e->datetime.tm_min, &e->datetime.tm_sec);
+	e->datetime.tm_year -= 1900;
+	e->datetime.tm_mon -= 1;
 	int id = addEvent(e);
 	if (~id) {
 		printf("添加成功^_^，ID：%d\n", id);
@@ -34,7 +39,7 @@ static void addEventView() {
 	}
 	system("pause");
 }
- 
+
 static void removeEventView() {
 	int id;
 	system("cls");
@@ -53,7 +58,7 @@ static void removeEventView() {
 
 static void modifyEventView() {
 	int id;
-	Event *e = newEvent();
+	Event* e = newEvent();
 	system("cls");
 	printf("- 修改比赛项目信息 -\n");
 	printf("请输入要修改的比赛项目ID：");
@@ -70,6 +75,11 @@ static void modifyEventView() {
 	scanf_s("%d", &(e->type));
 	printf("性别限定（0.未知，1.男子，2.女子，3.其他，4.混合）：");
 	scanf_s("%d", &(e->gender));
+	printf("比赛时间（年-月-日 时:分:秒）：");
+	scanf_s("%d-%d-%d %d:%d:%d", &e->datetime.tm_year, &e->datetime.tm_mon, &e->datetime.tm_mday,
+		&e->datetime.tm_hour, &e->datetime.tm_min, &e->datetime.tm_sec);
+	e->datetime.tm_year -= 1900;
+	e->datetime.tm_mon -= 1;
 	bool ret = modifyEvent(id, e);
 	if (ret) {
 		printf("修改成功^_^\n");
@@ -86,7 +96,7 @@ static void queryEventView() {
 	printf("- 查询比赛项目信息 -\n");
 	printf("请输入要查询的比赛项目ID：");
 	scanf_s("%d", &id);
-	Event *e = queryEvent(id);
+	Event* e = queryEvent(id);
 	if (!e) {
 		printf("未找到该比赛项目\n");
 		system("pause");
@@ -94,8 +104,11 @@ static void queryEventView() {
 	}
 	printf("项目ID：%d\n", e->id);
 	printf("项目名称：%s\n", e->name);
-	printf("项目类型（0.未知，1.田赛，2.竞赛，3.其他）：%d\n", e->type);
-	printf("性别限定（0.未知，1.男子，2.女子，3.其他，4.混合）：%d\n", e->gender);
+	printf("项目类型：%d（0.未知，1.田赛，2.竞赛，3.其他）\n", e->type);
+	printf("性别限定：%d（0.未知，1.男子，2.女子，3.其他，4.混合）\n", e->gender);
+	char datetime[20];
+	strftime(datetime, 20, "%Y-%m-%d %H:%M:%S", &e->datetime);
+	printf("比赛时间：%s\n", datetime);
 	system("pause");
 }
 
@@ -107,22 +120,23 @@ void eventView() {
 		printf("\n");
 		switch (op) {
 		case 1:
-			 addEventView();
+			addEventView();
 			break;
 		case 2:
-			 removeEventView();
+			removeEventView();
 			break;
 		case 3:
-			 modifyEventView();
+			modifyEventView();
 			break;
 		case 4:
-			 queryEventView();
+			queryEventView();
 			break;
 		case 0:
 			return;
 			break;
 		default:
 			printf("未知指令\n");
+			system("pause");
 		}
 	} while (op != 0);
 }
