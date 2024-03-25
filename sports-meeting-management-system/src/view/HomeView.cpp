@@ -3,7 +3,7 @@ Home View
 */
 #include "../../include/main.h"
 
- static void printMenu() {
+static void printMenu() {
 	system("cls");
 	printf("- 运动会管理系统 -\n");
 	printf("1. 比赛项目管理\n");
@@ -31,7 +31,7 @@ void homeView() {
 			athleteView();
 			break;
 		case 3:
-			printf("单位管理\n");
+			unitView();
 			break;
 		case 4:
 			printf("参赛信息管理\n");

@@ -32,6 +32,7 @@ bool modifyEvent(int id, Event *e) {
 	}
 	free(eventList[id]->name);
 	free(eventList[id]);
+	e->id = id;
 	eventList[id] = e;
 	return true;
 }

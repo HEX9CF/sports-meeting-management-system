@@ -86,16 +86,16 @@ static void queryEventView() {
 	printf("- 查询比赛项目信息 -\n");
 	printf("请输入要查询的比赛项目ID：");
 	scanf_s("%d", &id);
-	Event *a = queryEvent(id);
-	if (!a) {
+	Event *e = queryEvent(id);
+	if (!e) {
 		printf("未找到该比赛项目\n");
 		system("pause");
 		return;
 	}
-	printf("项目ID：%d\n", a->id);
-	printf("项目名称：%s\n", a->name);
-	printf("项目类型（0.未知，1.田赛，2.竞赛，3.其他）：%d\n", a->type);
-	printf("性别限定（0.未知，1.男子，2.女子，3.其他，4.混合）：%d\n", a->gender);
+	printf("项目ID：%d\n", e->id);
+	printf("项目名称：%s\n", e->name);
+	printf("项目类型（0.未知，1.田赛，2.竞赛，3.其他）：%d\n", e->type);
+	printf("性别限定（0.未知，1.男子，2.女子，3.其他，4.混合）：%d\n", e->gender);
 	system("pause");
 }
 

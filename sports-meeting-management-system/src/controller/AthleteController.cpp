@@ -32,6 +32,7 @@ bool modifyAthlete(int id, Athlete *a) {
 	}
 	free(athleteList[id]->name);
 	free(athleteList[id]);
+	a->id = id;
 	athleteList[id] = a;
 	return true;
 }
