@@ -11,7 +11,7 @@ typedef struct {
 }Participation;
 
 // view
-void athleteView();
+void participationView();
 
 // controller
 int addParticipation(Participation *a);

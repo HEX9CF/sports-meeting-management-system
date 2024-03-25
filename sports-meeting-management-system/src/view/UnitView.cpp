@@ -90,30 +90,32 @@ static void queryUnitView() {
 }
 
 void unitView() {
-	int op = -1;
+	char op;
 	do {
 		printMenu();
-		scanf_s("%d", &op);
+		scanf_s(" %c", &op);
+		// 清空输入缓冲区
+		while (getchar() != '\n');
 		printf("\n");
 		switch (op) {
-		case 1:
+		case '1':
 			 addUnitView();
 			break;
-		case 2:
+		case '2':
 			 removeUnitView();
 			break;
-		case 3:
+		case '3':
 			 modifyUnitView();
 			break;
-		case 4:
+		case '4':
 			 queryUnitView();
 			break;
-		case 0:
+		case '0':
 			return;
 			break;
 		default:
 			printf("未知指令\n");
 			system("pause");
 		}
-	} while (op != 0);
+	} while (1);
 }

@@ -18,34 +18,36 @@ static void printMenu() {
 }
  
 void homeView() {
-	int op = -1;
+	char op;
 	do {
 		printMenu();
-		scanf_s("%d", &op);
+		scanf_s(" %c", &op);
+		// 清空输入缓冲区
+		while (getchar() != '\n');
 		printf("\n");
 		switch (op) {
-		case 1:
+		case '1':
 			eventView();
 			break;
-		case 2:
+		case '2':
 			athleteView();
 			break;
-		case 3:
+		case '3':
 			unitView();
 			break;
-		case 4:
-			printf("参赛信息管理\n");
+		case '4':
+			participationView();
 			break;
-		case 5:
+		case '5':
 			printf("秩序册自动生成\n");
 			break;
-		case 6:
+		case '6':
 			printf("比赛成绩管理\n");
 			break;
-		case 7:
+		case '7':
 			printf("系统信息备份\n");
 			break;
-		case 0:
+		case '0':
 			printf("退出系统\n");
 			system("pause");
 			return;
@@ -54,5 +56,5 @@ void homeView() {
 			printf("未知指令\n");
 			system("pause");
 		}
-	} while (op != 0);
+	} while (1);
 }

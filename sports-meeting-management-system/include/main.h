@@ -13,6 +13,8 @@ Main Header
 #include "Event.h"
 #include "Unit.h"
 #include "Home.h"
+#include "Participation.h"
+#include "Score.h"
 
 #define MAX_SIZE 100
 #define MAX_LENGTH 100
