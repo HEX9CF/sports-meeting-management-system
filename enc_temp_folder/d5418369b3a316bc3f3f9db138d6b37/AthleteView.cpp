@@ -98,7 +98,7 @@ static void queryAthleteView() {
 	}
 	printf("运动员ID：%d\n", a->id);
 	printf("姓名：%s\n", a->name);
-	printf("性别：%s\n", getAthleteGenderStr(a));
+	printf("性别：%d（0.未知，1.男性，2.女性，3.其他）\n", a->gender);
 	printf("年龄：%d\n", a->age);
 	printf("所属单位ID：%d\n", a->age);
 	system("pause");

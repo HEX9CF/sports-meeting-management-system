@@ -39,7 +39,7 @@ void homeView() {
 			participationView();
 			break;
 		case '5':
-			printf("秩序册自动生成\n");
+			orderBookView();
 			break;
 		case '6':
 			scoreView();

@@ -28,10 +28,10 @@ int* getAthleteCount() {
 	switch (a->gender)
 	{
 	case 1:
-		return "男性";
+		return "男子";
 		break;
 	case 2:
-		return "女性";
+		return "女子";
 		break;
 	case 3: 
 		return "其他";
