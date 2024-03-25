@@ -42,7 +42,7 @@ void homeView() {
 			printf("秩序册自动生成\n");
 			break;
 		case '6':
-			printf("比赛成绩管理\n");
+			scoreView();
 			break;
 		case '7':
 			printf("系统信息备份\n");

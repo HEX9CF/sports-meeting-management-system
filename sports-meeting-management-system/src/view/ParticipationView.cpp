@@ -51,7 +51,6 @@ static void removeParticipationView() {
 
 static void modifyParticipationView() {
 	int id;
-	Participation* p = newParticipation();
 	system("cls");
 	printf("- 修改参赛信息 -\n");
 	printf("请输入要修改的参赛信息ID：");
@@ -61,6 +60,7 @@ static void modifyParticipationView() {
 		system("pause");
 		return;
 	}
+	Participation* p = newParticipation();
 	printf("请输入要修改的参赛信息：\n");
 	printf("比赛ID：");
 	scanf_s("%d", &(p->eventId));

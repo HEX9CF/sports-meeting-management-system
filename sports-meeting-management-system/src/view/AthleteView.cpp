@@ -55,7 +55,6 @@ static void removeAthleteView() {
 
 static void modifyAthleteView() {
 	int id;
-	Athlete *a = newAthlete();
 	system("cls");
 	printf("- 修改运动员信息 -\n");
 	printf("请输入要修改的运动员ID：");
@@ -65,6 +64,7 @@ static void modifyAthleteView() {
 		system("pause");
 		return;
 	}
+	Athlete *a = newAthlete();
 	printf("请输入要修改的运动员信息：\n");
 	printf("姓名：");
 	scanf_s("%s", a->name, MAX_LENGTH);

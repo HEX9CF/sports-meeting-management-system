@@ -58,7 +58,6 @@ static void removeEventView() {
 
 static void modifyEventView() {
 	int id;
-	Event* e = newEvent();
 	system("cls");
 	printf("- 修改比赛项目信息 -\n");
 	printf("请输入要修改的比赛项目ID：");
@@ -68,6 +67,7 @@ static void modifyEventView() {
 		system("pause");
 		return;
 	}
+	Event* e = newEvent();
 	printf("请输入要修改的比赛项目信息：\n");
 	printf("项目名：");
 	scanf_s("%s", e->name, MAX_LENGTH);

@@ -63,6 +63,9 @@
     <ClCompile Include="src\controller\ParticipationController.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\controller\ScoreController.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Athlete.h">

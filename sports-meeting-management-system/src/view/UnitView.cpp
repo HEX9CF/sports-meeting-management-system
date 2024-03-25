@@ -49,7 +49,6 @@ static void removeUnitView() {
 
 static void modifyUnitView() {
 	int id;
-	Unit *u = newUnit();
 	system("cls");
 	printf("- 修改单位信息 -\n");
 	printf("请输入要修改的单位ID：");
@@ -59,6 +58,7 @@ static void modifyUnitView() {
 		system("pause");
 		return;
 	}
+	Unit *u = newUnit();
 	printf("请输入要修改的单位信息：\n");
 	printf("项目名：");
 	scanf_s("%s", u->name, MAX_LENGTH);

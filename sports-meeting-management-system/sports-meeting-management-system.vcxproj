@@ -22,6 +22,7 @@
     <ClCompile Include="src\controller\AthleteController.cpp" />
     <ClCompile Include="src\controller\EventController.cpp" />
     <ClCompile Include="src\controller\ParticipationController.cpp" />
+    <ClCompile Include="src\controller\ScoreController.cpp" />
     <ClCompile Include="src\controller\UnitController.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\model\Athlete.cpp" />

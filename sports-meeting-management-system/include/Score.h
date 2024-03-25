@@ -7,12 +7,12 @@ Score Header
 typedef struct {
 	int id;
 	int participationId;
-	int Score;
-	int Rank;
+	double score;
+	int rank;
 }Score;
 
 // view
-void athleteView();
+void scoreView();
 
 // controller
 int addScore(Score *a);
