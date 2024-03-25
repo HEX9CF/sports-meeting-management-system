@@ -5,7 +5,7 @@ Event Header
 #define EVENT_H
 
 typedef struct {
-	int id;
+	int id; // PK
 	char* name;
 	int gender; // 0.未知，1.男子，2.女子，3.其他，4.混合
 	int type; // 0.未知，1.田赛，2.竞赛，3.其他

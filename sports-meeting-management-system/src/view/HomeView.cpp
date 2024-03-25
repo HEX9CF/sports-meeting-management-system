@@ -12,7 +12,8 @@ static void printMenu() {
 	printf("4. 参赛信息管理\n");
 	printf("5. 秩序册自动生成\n");
 	printf("6. 比赛成绩管理\n");
-	printf("7. 系统信息备份\n");
+	printf("7. 数据备份与恢复\n");
+	printf("8. 系统设置\n");
 	printf("0. 退出系统\n");
 	printf("请输入指令：");
 }

@@ -9,7 +9,8 @@ static void printMenu() {
 	printf("1. 添加比赛项目信息\n");
 	printf("2. 删除比赛项目信息\n");
 	printf("3. 修改比赛项目信息\n");
-	printf("4. 查询比赛项目信息\n");
+	printf("4. 查询所有比赛项目信息\n");
+	printf("5. 根据ID查询比赛项目信息\n");
 	printf("0. 返回上级菜单\n");
 	printf("请输入指令：");
 }
@@ -117,6 +118,25 @@ static void queryEventView() {
 	system("pause");
 }
 
+static void queryAllEventView() {
+	system("cls");
+	printf("- 所有比赛项目信息 -\n");
+	int count = *getEventCount();
+	for (int i = 1; i <= count; i++) {
+		Event* e = queryEvent(i);
+		printf("项目ID：%d\n", e->id);
+		printf("项目名称：%s\n", e->name);
+		printf("比赛类型：%s\n", getEventGenderStr(e));
+		printf("性别限定：%s\n", getEventTypeStr(e));
+		char datetime[20];
+		strftime(datetime, 20, "%Y-%m-%d %H:%M:%S", &e->datetime);
+		printf("比赛时间：%s\n", datetime);
+		printf("比赛场地：%s\n", e->location);
+		printf("\n");
+	}
+	system("pause");
+}
+
 void eventView() {
 	char op;
 	do {
@@ -136,6 +156,9 @@ void eventView() {
 			modifyEventView();
 			break;
 		case '4':
+			queryAllEventView();
+			break;
+		case '5':
 			queryEventView();
 			break;
 		case '0':

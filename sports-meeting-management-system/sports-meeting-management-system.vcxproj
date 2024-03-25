@@ -46,6 +46,7 @@
     <ClInclude Include="include\OrderBook.h" />
     <ClInclude Include="include\Participation.h" />
     <ClInclude Include="include\Score.h" />
+    <ClInclude Include="include\Setting.h" />
     <ClInclude Include="include\Unit.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

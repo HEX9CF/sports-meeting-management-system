@@ -10,15 +10,12 @@ Main Header
 #include <stdbool.h>
 #include <time.h>
 
+#include "Setting.h"
 #include "Athlete.h"
 #include "Event.h"
 #include "Unit.h"
 #include "Home.h"
 #include "Participation.h"
 #include "Score.h"
-#include "OrderBook.h"
-
-#define MAX_SIZE 1000
-#define MAX_LENGTH 100
-
+#include "OrderBook.h" 
 #endif
