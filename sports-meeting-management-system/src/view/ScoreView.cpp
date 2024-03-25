@@ -11,8 +11,8 @@ static void printMenu() {
 	printf("3. 修改成绩信息\n");
 	printf("4. 根据成绩ID查询比赛成绩\n");
 	printf("5. 根据比赛项目ID查询比赛成绩\n");
-	printf("6. 根据参赛单位ID查询比赛成绩\n");
-	printf("7. 根据参赛运动员ID查询比赛成绩\n");
+	printf("6. 根据参赛单位ID查询比赛成绩，并汇总单位总分\n");
+	printf("7. 根据参赛运动员ID查询比赛成绩，并汇总运动员总分\n");
 	printf("0. 返回上级菜单\n");
 	printf("请输入指令：");
 }
@@ -49,6 +49,7 @@ static void removeScoreView() {
 	int id;
 	system("cls");
 	printf("- 删除成绩信息 -\n");
+	printf("9. 根据项目汇总比赛成绩\n");
 	printf("请输入要删除的成绩ID：");
 	scanf_s("%d", &id);
 	bool ret = removeScore(id);
@@ -152,6 +153,7 @@ static void queryScoreByEventIdView() {
 
 static void queryScoreByUnitIdView() {
 	int unitId;
+	long double sum = 0;
 	system("cls");
 	printf("- 根据参赛单位ID查询比赛成绩 -\n");
 	printf("请输入要查询的参赛单位ID：");
@@ -178,6 +180,7 @@ static void queryScoreByUnitIdView() {
 			continue;
 		}
 		if (a->unitId == unitId) {
+			sum += s->score;
 			printf("成绩ID：%d\n", s->id);
 			printf("参赛信息ID：%d\n", s->participationId);
 			printf("运动员姓名：%s\n", a->name);
@@ -186,11 +189,13 @@ static void queryScoreByUnitIdView() {
 			printf("\n");
 		}
 	}
+	printf("单位总分：%lf\n", sum);
 	system("pause");
 }
 
 static void queryScoreByAthleteIdView() {
 	int athleteId;
+	long double sum = 0;
 	system("cls");
 	printf("- 根据参赛运动员ID查询比赛成绩 -\n");
 	printf("请输入要查询的参赛运动员ID：");
@@ -213,6 +218,7 @@ static void queryScoreByAthleteIdView() {
 			continue;
 		}
 		if (p->athleteId == athleteId) {
+			sum += s->score;
 			printf("成绩ID：%d\n", s->id);
 			printf("参赛信息ID：%d\n", s->participationId);
 			printf("分数：%lf\n", s->score);
@@ -220,6 +226,7 @@ static void queryScoreByAthleteIdView() {
 			printf("\n");
 		}
 	}
+	printf("运动员总分：%lf\n", sum);
 	system("pause");	
 }
 

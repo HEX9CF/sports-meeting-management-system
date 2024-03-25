@@ -19,7 +19,7 @@ static void addUnitView() {
 	system("cls");
 	printf("- 添加单位信息 -\n");
 	printf("请输入要添加的单位信息：\n");
-	printf("项目名称：");
+	printf("单位名称：");
 	scanf_s("%s", u->name, MAX_LENGTH);
 	int id = addUnit(u);
 	if (~id) {
