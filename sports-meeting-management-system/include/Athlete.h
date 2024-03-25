@@ -5,11 +5,11 @@ Athlete Header
 #define ATHLETE_H
 
 typedef struct {
-	int id;
+	int id; // PK
 	char* name;
 	int gender; // 0.未知，1.男性，2.女性，3.其他
 	int age;
-	int unitId;
+	int unitId; // FK
 }Athlete;
 
 // view

@@ -5,8 +5,8 @@ Score Header
 #define SCORE_H
 
 typedef struct {
-	int id;
-	int participationId;
+	int id; // PK
+	int participationId; // FK
 	double score;
 	int rank;
 }Score;

@@ -5,7 +5,7 @@ Unit Header
 #define UNIT_H
 
 typedef struct {
-	int id;
+	int id;	// PK
 	char* name;
 } Unit;
 

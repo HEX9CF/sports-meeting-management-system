@@ -5,9 +5,9 @@ Participation Header
 #define PARTICIPATION_H
 
 typedef struct {
-	int id;
-	int eventId;
-	int athleteId; 
+	int id; // PK
+	int eventId; // FK
+	int athleteId; // FK
 }Participation;
 
 // view

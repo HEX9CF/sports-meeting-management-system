@@ -19,10 +19,23 @@ static void addParticipationView() {
 	system("cls");
 	printf("- 添加参赛信息 -\n");
 	printf("请输入要添加的参赛信息：\n");
+	int eventId, athleteId;
 	printf("比赛ID：");
-	scanf_s("%d", &(p->eventId));
+	scanf_s("%d", &eventId);
+	if (!queryEvent(eventId)) {
+		printf("发生错误，比赛不存在\n");
+		system("pause");
+		return;
+	}
 	printf("运动员ID：");
-	scanf_s("%d", &(p->eventId));
+	scanf_s("%d", &athleteId);
+	if (!queryAthlete(athleteId)) {
+		printf("发生错误，运动员不存在\n");
+		system("pause");
+		return;
+	}
+	p->eventId = eventId;
+	p->athleteId = athleteId;
 	int id = addParticipation(p);
 	if (~id) {
 		printf("添加成功^_^，ID：%d\n", id);
@@ -62,10 +75,23 @@ static void modifyParticipationView() {
 	}
 	Participation* p = newParticipation();
 	printf("请输入要修改的参赛信息：\n");
+	int eventId, athleteId;
 	printf("比赛ID：");
-	scanf_s("%d", &(p->eventId));
+	scanf_s("%d", &eventId);
+	if (!queryEvent(eventId)) {
+		printf("发生错误，比赛不存在\n");
+		system("pause");
+		return;
+	}
 	printf("运动员ID：");
-	scanf_s("%d", &(p->athleteId));
+	scanf_s("%d", &athleteId);
+	if (!queryAthlete(athleteId)) {
+		printf("发生错误，运动员不存在\n");
+		system("pause");
+		return;
+	}
+	p->eventId = eventId;
+	p->athleteId = athleteId;
 	bool ret = modifyParticipation(id, p);
 	if (ret) {
 		printf("修改成功^_^\n");
