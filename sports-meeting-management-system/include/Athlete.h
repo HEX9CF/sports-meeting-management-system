@@ -25,5 +25,5 @@ Athlete* queryAthlete(int id);
 Athlete* newAthlete();
 Athlete** getAthleteList(); 
 int* getAthleteCount();
-const char* getAthleteGenderStr(Athlete *a);
+const char* getAthleteGenderStr(Athlete* a);
 #endif

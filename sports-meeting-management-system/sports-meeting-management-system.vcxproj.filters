@@ -27,7 +27,7 @@
     <ClCompile Include="src\view\HomeView.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\model\Athlete.cpp">
+    <ClCompile Include="src\model\AthleteList.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\view\EventView.cpp">
@@ -42,19 +42,19 @@
     <ClCompile Include="src\view\ParticipationView.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\model\Event.cpp">
+    <ClCompile Include="src\model\EventList.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\controller\EventController.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\model\Unit.cpp">
+    <ClCompile Include="src\model\UnitList.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\model\Score.cpp">
+    <ClCompile Include="src\model\ScoreList.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\model\Participation.cpp">
+    <ClCompile Include="src\model\ParticipationList.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\controller\UnitController.cpp">
@@ -67,6 +67,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\view\OrderBookView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\SettingView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\model\Setting.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

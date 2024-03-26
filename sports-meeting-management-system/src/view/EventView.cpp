@@ -124,6 +124,9 @@ static void queryAllEventView() {
 	int count = *getEventCount();
 	for (int i = 1; i <= count; i++) {
 		Event* e = queryEvent(i);
+		if (!e) {
+			continue;
+		}
 		printf("项目ID：%d\n", e->id);
 		printf("项目名称：%s\n", e->name);
 		printf("比赛类型：%s\n", getEventGenderStr(e));
