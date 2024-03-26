@@ -10,12 +10,12 @@ Main Header
 #include <stdbool.h>
 #include <time.h>
 
-#include "Setting.h"
-#include "Athlete.h"
-#include "Event.h"
-#include "Unit.h"
-#include "Home.h"
-#include "Participation.h"
-#include "Score.h"
-#include "OrderBook.h" 
+#include "setting.h"
+#include "athlete.h"
+#include "event.h"
+#include "unit.h"
+#include "home.h"
+#include "participation.h"
+#include "score.h"
+#include "orderBook.h" 
 #endif

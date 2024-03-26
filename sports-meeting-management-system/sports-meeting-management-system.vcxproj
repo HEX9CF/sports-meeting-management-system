@@ -41,15 +41,15 @@
     <ClCompile Include="src\view\UnitView.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Athlete.h" />
-    <ClInclude Include="include\Event.h" />
-    <ClInclude Include="include\Home.h" />
+    <ClInclude Include="include\athlete.h" />
+    <ClInclude Include="include\event.h" />
+    <ClInclude Include="include\home.h" />
     <ClInclude Include="include\main.h" />
-    <ClInclude Include="include\OrderBook.h" />
-    <ClInclude Include="include\Participation.h" />
-    <ClInclude Include="include\Score.h" />
-    <ClInclude Include="include\Setting.h" />
-    <ClInclude Include="include\Unit.h" />
+    <ClInclude Include="include\orderBook.h" />
+    <ClInclude Include="include\participation.h" />
+    <ClInclude Include="include\score.h" />
+    <ClInclude Include="include\setting.h" />
+    <ClInclude Include="include\unit.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
