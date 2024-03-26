@@ -14,9 +14,9 @@ typedef struct {
 void participationView();
 
 // controller
-int addParticipation(Participation *a);
+int addParticipation(Participation *p);
 bool removeParticipation(int id);
-bool modifyParticipation(int id, Participation *a);
+bool modifyParticipation(int id, Participation *p);
 Participation* queryParticipation(int id);
 
 // model

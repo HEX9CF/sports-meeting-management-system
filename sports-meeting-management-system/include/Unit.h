@@ -13,9 +13,9 @@ typedef struct {
 void unitView();
 
 // controller
-int addUnit(Unit* a);
+int addUnit(Unit* u);
 bool removeUnit(int id);
-bool modifyUnit(int id, Unit* a);
+bool modifyUnit(int id, Unit* u);
 Unit* queryUnit(int id);
 
 // model

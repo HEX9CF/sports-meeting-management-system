@@ -15,9 +15,9 @@ typedef struct {
 void scoreView();
 
 // controller
-int addScore(Score *a);
+int addScore(Score *s);
 bool removeScore(int id);
-bool modifyScore(int id, Score *a);
+bool modifyScore(int id, Score *s);
 Score* queryScore(int id);
 
 // model

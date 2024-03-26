@@ -17,9 +17,9 @@ typedef struct {
 void eventView();
 
 // controller
-int addEvent(Event* a);
+int addEvent(Event* e);
 bool removeEvent(int id);
-bool modifyEvent(int id, Event* a);
+bool modifyEvent(int id, Event* e);
 Event* queryEvent(int id);
 
 // model
