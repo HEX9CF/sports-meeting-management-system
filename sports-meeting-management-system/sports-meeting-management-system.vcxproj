@@ -20,7 +20,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\controller\AthleteController.cpp" />
+    <ClCompile Include="src\controller\DataController.cpp" />
     <ClCompile Include="src\controller\EventController.cpp" />
+    <ClCompile Include="src\controller\OrderBookController.cpp" />
     <ClCompile Include="src\controller\ParticipationController.cpp" />
     <ClCompile Include="src\controller\ScoreController.cpp" />
     <ClCompile Include="src\controller\UnitController.cpp" />
@@ -32,6 +34,7 @@
     <ClCompile Include="src\model\Setting.cpp" />
     <ClCompile Include="src\model\UnitList.cpp" />
     <ClCompile Include="src\view\AthleteView.cpp" />
+    <ClCompile Include="src\view\DataView.cpp" />
     <ClCompile Include="src\view\EventView.cpp" />
     <ClCompile Include="src\view\HomeView.cpp" />
     <ClCompile Include="src\view\OrderBookView.cpp" />
@@ -42,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\athlete.h" />
+    <ClInclude Include="include\data.h" />
     <ClInclude Include="include\event.h" />
     <ClInclude Include="include\home.h" />
     <ClInclude Include="include\main.h" />

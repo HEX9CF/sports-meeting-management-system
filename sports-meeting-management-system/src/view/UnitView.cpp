@@ -5,7 +5,7 @@ Unit View
 
 static void printMenu() {
 	system("cls");
-	printf("- 单位管理 -\n");
+	printf("- 单位信息管理 -\n");
 	printf("1. 添加单位信息\n");
 	printf("2. 删除单位信息\n");
 	printf("3. 修改单位信息\n");

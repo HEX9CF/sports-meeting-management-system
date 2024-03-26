@@ -7,4 +7,6 @@ Order Book Header
 // view
 void orderBookView();
 
+// controller
+bool exportOrderBook();
 #endif

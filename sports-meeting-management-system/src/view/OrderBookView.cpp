@@ -7,15 +7,16 @@ static void printMenu() {
 	system("cls");
 	printf("- 秩序册自动生成 -\n");
 	printf("1. 秩序册预览\n");
-	printf("2. 保存秩序册\n");
+	printf("2. 导出秩序册到文件\n");
 	printf("0. 返回上级菜单\n");
 	printf("请输入指令：");
 }
 
-static void previewOrderBook() {
+static void previewOrderBookView() {
 	system("cls");
 	// 比赛项目
 	const int eventCount = *getEventCount();
+	printf("- 运动会秩序册 -\n");
 	for (int i = 1; i <= eventCount; i++) {
 		Event* e = queryEvent(i);
 		if (!e) {
@@ -34,12 +35,12 @@ static void previewOrderBook() {
 		const int participationCount = *getParticipationCount();
 		for (int i = 1; i <= participationCount; i++) {
 			Participation* p = queryParticipation(i);
-			if(!p) {
+			if (!p) {
 				continue;
 			}
-			if(p->eventId == e->id) {
+			if (p->eventId == e->id) {
 				Athlete* a = queryAthlete(p->athleteId);
-				if(!a) {
+				if (!a) {
 					continue;
 				}
 				printf("%s ", a->name);
@@ -47,15 +48,24 @@ static void previewOrderBook() {
 		}
 		printf("\n");
 		printf("\n");
-	} 
+	}
 	system("pause");
 }
 
-static void saveOrderBook() {
+static void exportOrderBookView() {
 	system("cls");
+	bool ret = exportOrderBook();
+	if (ret)
+	{
+		printf("导出成功^_^\n");
+	}
+	else
+	{
+		printf("导出失败\n");
+	}
 	system("pause");
 }
- 
+
 void orderBookView() {
 	char op;
 	do {
@@ -66,10 +76,10 @@ void orderBookView() {
 		printf("\n");
 		switch (op) {
 		case '1':
-			 previewOrderBook();
+			previewOrderBookView();
 			break;
 		case '2':
-			 saveOrderBook();
+			exportOrderBookView();
 			break;
 		case '0':
 			return;

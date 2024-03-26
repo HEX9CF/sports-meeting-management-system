@@ -12,7 +12,7 @@ static void printMenu() {
 	printf("4. 参赛信息管理\n");
 	printf("5. 秩序册自动生成\n");
 	printf("6. 比赛成绩管理\n");
-	printf("7. 数据备份与恢复\n");
+	printf("7. 数据导入导出\n");
 	printf("8. 系统控制面板\n");
 	printf("0. 退出管理系统\n");
 	printf("请输入指令：");
@@ -46,7 +46,7 @@ void homeView() {
 			scoreView();
 			break;
 		case '7':
-			printf("系统信息备份\n");
+			dataView();
 			break;
 		case '8':
 			settingView();
