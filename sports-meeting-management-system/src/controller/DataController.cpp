@@ -84,7 +84,7 @@ bool exportParticipationData() {
 	fopen_s(&file, "participation.csv", "w");
 	if (!file)
 	{
-				return false;
+		return false;
 	}
 	fprintf(file, "参赛ID, 运动员ID, 项目ID\n");
 	const int participationCount = *getParticipationCount();
@@ -101,4 +101,25 @@ bool exportParticipationData() {
 	return true;
 }
 
-
+bool exportScoreData()
+{
+	FILE* file;
+	fopen_s(&file, "score.csv", "w");
+	if (!file)
+	{
+				return false;
+	}
+	fprintf(file, "成绩ID, 参赛信息ID, 分数, 排名\n");
+	const int scoreCount = *getScoreCount();
+	for (int i = 0; i < scoreCount; i++)
+	{
+		Score* s = queryScore(i);
+		if (!s)
+		{
+			continue;
+		}
+		fprintf(file, "%d, %d, %lf, %d\n", s->id, s->participationId, s->score, s->rank);
+	}
+	fclose(file);
+	return true;
+}
