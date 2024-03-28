@@ -57,7 +57,7 @@ static void exportOrderBookView() {
 	bool ret = exportOrderBook();
 	if (ret)
 	{
-		printf("导出成功^_^\n");
+		printf("秩序册导出成功，文件名：orderBook.txt\n");
 	}
 	else
 	{
