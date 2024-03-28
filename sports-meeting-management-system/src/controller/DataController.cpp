@@ -56,4 +56,25 @@ bool exportEventData()
 	return true;
 }
 
-
+bool exportAthleteData()
+{
+	FILE* file;
+	fopen_s(&file, "athlete.csv", "w");
+	if (!file)
+	{
+		return false;
+	}
+	fprintf(file, "运动员ID, 姓名, 性别, 年龄, 单位ID\n");
+	const int athleteCount = *getAthleteCount();
+	for (int i = 0; i < athleteCount; i++)
+	{
+				Athlete* a = queryAthlete(i);
+		if (!a)
+		{
+			continue;
+		}
+		fprintf(file, "%d, %s, %s, %d, %d\n", a->id, a->name, getAthleteGenderStr(a), a->age, a->unitId);
+	}
+	fclose(file);
+	return true;
+}

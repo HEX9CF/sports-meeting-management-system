@@ -53,16 +53,16 @@ static void dataExportView()
 			printf("比赛项目导出失败\n");
 			break;
 		}
-		// ret = exportAthleteData();
-		// if (ret)
-		// {
-		// 	printf("运动员信息导出成功，文件名：athlete.csv\n");
-		// }
-		// else
-		// {
-		// 	printf("运动员信息导出失败\n");
-		// 	break;
-		// }
+		ret = exportAthleteData();
+		if (ret)
+		{
+			printf("运动员信息导出成功，文件名：athlete.csv\n");
+		}
+		else
+		{
+			printf("运动员信息导出失败\n");
+			break;
+		}
 		// ret = exportParticipationData();
 		// if (ret)
 		// {
