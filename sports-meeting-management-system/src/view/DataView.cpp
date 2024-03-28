@@ -30,10 +30,23 @@ static void dataImportView()
 static void dataExportView()
 {
 	system("cls");
-	bool ret = exportData();
+	bool ret = 1;
+	do
+	{
+		ret = exportUnitData();
+		if (ret)
+		{
+			printf("单位信息导出成功，文件名：unit.txt\n");
+		}
+		else
+		{
+			printf("单位信息导出失败\n");
+			break;
+		}
+	} while (0);
 	if (ret)
 	{
-		printf("导出成功^_^\n");
+		printf("所有文件导出成功^_^\n");
 	}
 	else
 	{

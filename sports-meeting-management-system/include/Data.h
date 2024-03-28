@@ -9,5 +9,9 @@ void dataView();
 
 // controller
 bool importData();
-bool exportData(); 
+bool exportUnitData();
+bool exportEventData();
+bool exportAthleteData();
+bool exportParticipationData();
+bool exportScoreData(); 
 #endif
