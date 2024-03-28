@@ -6,9 +6,9 @@ Home View
 static void printMenu() {
 	system("cls");
 	printf("- 运动会管理系统 -\n");
-	printf("1. 比赛项目管理\n");
+	printf("1. 单位信息管理\n");
 	printf("2. 运动员信息管理\n");
-	printf("3. 单位信息管理\n");
+	printf("3. 比赛项目管理\n");
 	printf("4. 参赛信息管理\n");
 	printf("5. 秩序册自动生成\n");
 	printf("6. 比赛成绩管理\n");
@@ -28,13 +28,13 @@ void homeView() {
 		printf("\n");
 		switch (op) {
 		case '1':
-			eventView();
+			unitView();
 			break;
 		case '2':
 			athleteView();
 			break;
 		case '3':
-			unitView();
+			eventView();
 			break;
 		case '4':
 			participationView();

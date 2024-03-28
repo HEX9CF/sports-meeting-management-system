@@ -30,3 +30,30 @@ bool exportUnitData()
 	fclose(file);
 	return true;
 }
+ 
+bool exportEventData()
+{
+	FILE* file;
+	fopen_s(&file, "event.csv", "w");
+	if (!file)
+	{
+		return false;
+	}
+	fprintf(file, "项目ID, 项目名称, 比赛类型, 性别限定, 比赛时间, 比赛场地\n");
+	const int eventCount = *getEventCount();
+	for (int i = 0; i < eventCount; i++)
+	{
+		Event* e = queryEvent(i);
+		if (!e)
+		{
+			continue;
+		}
+		char datetime[20];
+		strftime(datetime, 20, "%Y-%m-%d %H:%M:%S", &e->datetime);
+		fprintf(file, "%d, %s, %s, %s, %s, %s\n", e->id, e->name, getEventGenderStr(e), getEventTypeStr(e), datetime, e->location);
+	}
+	fclose(file);
+	return true;
+}
+
+

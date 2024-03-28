@@ -36,13 +36,53 @@ static void dataExportView()
 		ret = exportUnitData();
 		if (ret)
 		{
-			printf("单位信息导出成功，文件名：unit.txt\n");
+			printf("单位信息导出成功，文件名：unit.csv\n");
 		}
 		else
 		{
 			printf("单位信息导出失败\n");
 			break;
 		}
+		ret = exportEventData();
+		if (ret)
+		{
+			printf("比赛项目导出成功，文件名：event.csv\n");
+		}
+		else
+		{
+			printf("比赛项目导出失败\n");
+			break;
+		}
+		// ret = exportAthleteData();
+		// if (ret)
+		// {
+		// 	printf("运动员信息导出成功，文件名：athlete.csv\n");
+		// }
+		// else
+		// {
+		// 	printf("运动员信息导出失败\n");
+		// 	break;
+		// }
+		// ret = exportParticipationData();
+		// if (ret)
+		// {
+		// 	printf("参赛信息导出成功，文件名：participation.csv\n");
+		// }
+		// else
+		// {
+		// 	printf("参赛信息导出失败\n");
+		// 	break;
+		// }
+		// ret = exportScoreData();
+		// if (ret)
+		// {
+		// 	printf("成绩信息导出成功，文件名：score.csv\n");
+		// }
+		// else
+		// {
+		// 	printf("成绩信息导出失败\n");
+		// 	break;
+		// }
 	} while (0);
 	if (ret)
 	{
@@ -50,7 +90,7 @@ static void dataExportView()
 	}
 	else
 	{
-		printf("导出失败\n");
+		printf("发生错误，导出失败\n");
 	}
 	system("pause");
 }

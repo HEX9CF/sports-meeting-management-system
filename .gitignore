@@ -405,5 +405,7 @@ FodyWeavers.xsd
 *.sln.iml
 
 # export files
+export/
 *.txt
+*.csv
 
