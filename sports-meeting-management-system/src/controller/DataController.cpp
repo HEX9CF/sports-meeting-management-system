@@ -78,3 +78,27 @@ bool exportAthleteData()
 	fclose(file);
 	return true;
 }
+
+bool exportParticipationData() {
+	FILE* file;
+	fopen_s(&file, "participation.csv", "w");
+	if (!file)
+	{
+				return false;
+	}
+	fprintf(file, "参赛ID, 运动员ID, 项目ID\n");
+	const int participationCount = *getParticipationCount();
+	for (int i = 0; i < participationCount; i++)
+	{
+		Participation* p = queryParticipation(i);
+		if (!p)
+		{
+			continue;
+		}
+		fprintf(file, "%d, %d, %d\n", p->id, p->athleteId, p->eventId);
+	}
+	fclose(file);
+	return true;
+}
+
+
