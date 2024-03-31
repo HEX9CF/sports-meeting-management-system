@@ -57,13 +57,13 @@ static void setRankingRule() {
 	printf("- 设置成绩名次选取规则 -\n");
 	for (int i = 1; i <= 2; i++) {
 		// 设置参赛人数区间
-		printf("请输入第%d个区间的最小参赛人数和最大参赛人数：", i);
+		printf("请输入第%d个区间的最小参赛人数和最大参赛人数（输入2个数字，用空格隔开）：", i);
 		scanf_s("%d %d", &RANKING_ATHLETE_RANGE[i][0], &RANKING_ATHLETE_RANGE[i][1]);
 		// 设置名次选取数量
 		printf("请输入第%d个区间的名次选取数量：", i);
 		scanf_s("%d", &RANKING_SELECT_COUNT[i]); 
 		// 设置名次得分
-		printf("请输入第%d个区间的名次得分：", i);
+		printf("请输入第%d个区间的名次得分（输入%d个数字，用空格隔开）：", i, RANKING_SELECT_COUNT[i]);
 		for (int j = 1; j <= RANKING_SELECT_COUNT[i]; j++) {
 			scanf_s("%d", &RANKING_SCORE_RULE[i][j]);
 		}
