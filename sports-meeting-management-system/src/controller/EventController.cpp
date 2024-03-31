@@ -16,7 +16,7 @@ int addEvent(Event *e) {
 
 bool removeEvent(int id) {
 	Event** eventList = getEventList();
-	if (id < 0 || id >= MAX_SIZE || !eventList[id]) {
+	if (id < 1 || id >= MAX_SIZE || !eventList[id]) {
 		return false;
 	}
 	free(eventList[id]->name);
@@ -28,7 +28,7 @@ bool removeEvent(int id) {
 
 bool modifyEvent(int id, Event *e) {
 	Event** eventList = getEventList();
-	if (id < 0 || id >= MAX_SIZE || !eventList[id]) {
+	if (id < 1 || id >= MAX_SIZE || !eventList[id]) {
 		return false;
 	}
 	free(eventList[id]->name);
@@ -40,7 +40,7 @@ bool modifyEvent(int id, Event *e) {
 
 Event* queryEvent(int id) {
 	Event** eventList = getEventList();
-	if (id < 0 || id >= MAX_SIZE) {
+	if (id < 1 || id >= MAX_SIZE) {
 		return NULL;
 	}
 	return eventList[id];

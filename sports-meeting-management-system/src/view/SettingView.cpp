@@ -88,10 +88,10 @@ void settingView() {
 			setAthleteMaxParticipation();
 			break;
 		case '3':
-			setAthleteMaxParticipation();
+			setEventMinParticipation();
 			break; 
 		case '4':
-			setAthleteMaxParticipation();
+			setRankingRule();
 			break;
 		case '0':
 			return;

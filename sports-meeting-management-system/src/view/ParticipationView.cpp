@@ -34,6 +34,30 @@ static void addParticipationView() {
 		system("pause");
 		return;
 	}
+	// 限制运动员参赛项目数量
+	int athleteParticipationCount = 0;
+	int participationCount = *getParticipationCount();
+	for (int i = 1; i <= participationCount; i++)
+	{
+		Participation* p = queryParticipation(i);
+		if (p->athleteId == athleteId)
+		{
+			athleteParticipationCount++;
+			if (p->eventId == eventId)
+			{
+				// 防止运动员重复参加同一项目
+				printf("该运动员已参加该项目，请勿重复报名\n");
+				system("pause");
+				return;
+			}
+		}
+	}
+	if (athleteParticipationCount >= MAX_ATHLETE_PARTICIPATION)
+	{
+		printf("运动员参赛项目数量已达上限\n");
+		system("pause");
+		return;
+	}
 	p->eventId = eventId;
 	p->athleteId = athleteId;
 	int id = addParticipation(p);

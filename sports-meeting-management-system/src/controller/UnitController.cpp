@@ -16,7 +16,7 @@ int addUnit(Unit *u) {
 
 bool removeUnit(int id) {
 	Unit** unitList = getUnitList();
-	if (id < 0 || id >= MAX_SIZE || !unitList[id]) {
+	if (id < 1 || id >= MAX_SIZE || !unitList[id]) {
 		return false;
 	}
 	free(unitList[id]->name);
@@ -27,7 +27,7 @@ bool removeUnit(int id) {
 
 bool modifyUnit(int id, Unit *u) {
 	Unit** unitList = getUnitList();
-	if (id < 0 || id >= MAX_SIZE || !unitList[id]) {
+	if (id < 1 || id >= MAX_SIZE || !unitList[id]) {
 		return false;
 	}
 	free(unitList[id]->name);
@@ -39,7 +39,7 @@ bool modifyUnit(int id, Unit *u) {
 
 Unit* queryUnit(int id) {
 	Unit** unitList = getUnitList();
-	if (id < 0 || id >= MAX_SIZE) {
+	if (id < 1 || id >= MAX_SIZE) {
 		return NULL;
 	}
 	return unitList[id];

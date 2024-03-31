@@ -16,7 +16,7 @@ int addAthlete(Athlete *a) {
 
 bool removeAthlete(int id) {
 	Athlete** athleteList = getAthleteList();
-	if (id < 0 || id >= MAX_SIZE || !athleteList[id]) {
+	if (id < 1 || id >= MAX_SIZE || !athleteList[id]) {
 		return false;
 	}
 	free(athleteList[id]->name);
@@ -27,7 +27,7 @@ bool removeAthlete(int id) {
 
 bool modifyAthlete(int id, Athlete *a) {
 	Athlete** athleteList = getAthleteList();
-	if (id < 0 || id >= MAX_SIZE || !athleteList[id]) {
+	if (id < 1 || id >= MAX_SIZE || !athleteList[id]) {
 		return false;
 	}
 	free(athleteList[id]->name);
@@ -39,7 +39,7 @@ bool modifyAthlete(int id, Athlete *a) {
 
 Athlete* queryAthlete(int id) {
 	Athlete** athleteList = getAthleteList();
-	if (id < 0 || id >= MAX_SIZE) {
+	if (id < 1 || id >= MAX_SIZE) {
 		return NULL;
 	}
 	return athleteList[id];

@@ -16,7 +16,7 @@ int addParticipation(Participation *e) {
 
 bool removeParticipation(int id) {
 	Participation** participationList = getParticipationList();
-	if (id < 0 || id >= MAX_SIZE || !participationList[id]) {
+	if (id < 1 || id >= MAX_SIZE || !participationList[id]) {
 		return false;
 	}
 	free(participationList[id]);
@@ -26,7 +26,7 @@ bool removeParticipation(int id) {
 
 bool modifyParticipation(int id, Participation *e) {
 	Participation** participationList = getParticipationList();
-	if (id < 0 || id >= MAX_SIZE || !participationList[id]) {
+	if (id < 1 || id >= MAX_SIZE || !participationList[id]) {
 		return false;
 	}
 	free(participationList[id]);
@@ -37,7 +37,7 @@ bool modifyParticipation(int id, Participation *e) {
 
 Participation* queryParticipation(int id) {
 	Participation** participationList = getParticipationList();
-	if (id < 0 || id >= MAX_SIZE) {
+	if (id < 1 || id >= MAX_SIZE) {
 		return NULL;
 	}
 	return participationList[id];

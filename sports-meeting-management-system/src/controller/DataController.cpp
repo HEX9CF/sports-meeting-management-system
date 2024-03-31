@@ -30,7 +30,7 @@ bool exportUnitData()
 	fclose(file);
 	return true;
 }
- 
+
 bool exportEventData()
 {
 	FILE* file;
@@ -68,7 +68,7 @@ bool exportAthleteData()
 	const int athleteCount = *getAthleteCount();
 	for (int i = 0; i < athleteCount; i++)
 	{
-				Athlete* a = queryAthlete(i);
+		Athlete* a = queryAthlete(i);
 		if (!a)
 		{
 			continue;
@@ -107,7 +107,7 @@ bool exportScoreData()
 	fopen_s(&file, "score.csv", "w");
 	if (!file)
 	{
-				return false;
+		return false;
 	}
 	fprintf(file, "成绩ID, 参赛信息ID, 分数, 排名\n");
 	const int scoreCount = *getScoreCount();

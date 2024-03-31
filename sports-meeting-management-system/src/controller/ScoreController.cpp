@@ -16,7 +16,7 @@ int addScore(Score *s) {
 
 bool removeScore(int id) {
 	Score** scoreList = getScoreList();
-	if (id < 0 || id >= MAX_SIZE || !scoreList[id]) {
+	if (id < 1 || id >= MAX_SIZE || !scoreList[id]) {
 		return false;
 	}
 	free(scoreList[id]);
@@ -26,7 +26,7 @@ bool removeScore(int id) {
 
 bool modifyScore(int id, Score *s) {
 	Score** scoreList = getScoreList();
-	if (id < 0 || id >= MAX_SIZE || !scoreList[id]) {
+	if (id < 1 || id >= MAX_SIZE || !scoreList[id]) {
 		return false;
 	}
 	free(scoreList[id]);
@@ -37,7 +37,7 @@ bool modifyScore(int id, Score *s) {
 
 Score* queryScore(int id) {
 	Score** scoreList = getScoreList();
-	if (id < 0 || id >= MAX_SIZE) {
+	if (id < 1 || id >= MAX_SIZE) {
 		return NULL;
 	}
 	return scoreList[id];
