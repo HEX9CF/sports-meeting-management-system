@@ -18,7 +18,7 @@ bool exportUnitData()
 	}
 	fprintf(file, "单位ID, 单位名称\n");
 	const int unitCount = *getUnitCount();
-	for (int i = 0; i < unitCount; i++)
+	for (int i = 1; i <= unitCount; i++)
 	{
 		Unit* u = queryUnit(i);
 		if (!u)
@@ -41,7 +41,7 @@ bool exportEventData()
 	}
 	fprintf(file, "项目ID, 项目名称, 比赛类型, 性别限定, 比赛时间, 比赛场地\n");
 	const int eventCount = *getEventCount();
-	for (int i = 0; i < eventCount; i++)
+	for (int i = 1; i <= eventCount; i++)
 	{
 		Event* e = queryEvent(i);
 		if (!e)
@@ -66,7 +66,7 @@ bool exportAthleteData()
 	}
 	fprintf(file, "运动员ID, 姓名, 性别, 年龄, 单位ID\n");
 	const int athleteCount = *getAthleteCount();
-	for (int i = 0; i < athleteCount; i++)
+	for (int i = 1; i <= athleteCount; i++)
 	{
 		Athlete* a = queryAthlete(i);
 		if (!a)
@@ -75,7 +75,6 @@ bool exportAthleteData()
 		}
 		fprintf(file, "%d, %s, %s, %d, %d\n", a->id, a->name, getAthleteGenderStr(a), a->age, a->unitId);
 	}
-	fclose(file);
 	return true;
 }
 
@@ -88,7 +87,7 @@ bool exportParticipationData() {
 	}
 	fprintf(file, "参赛ID, 运动员ID, 项目ID\n");
 	const int participationCount = *getParticipationCount();
-	for (int i = 0; i < participationCount; i++)
+	for (int i = 1; i <= participationCount; i++)
 	{
 		Participation* p = queryParticipation(i);
 		if (!p)
@@ -111,7 +110,7 @@ bool exportScoreData()
 	}
 	fprintf(file, "成绩ID, 参赛信息ID, 分数, 排名\n");
 	const int scoreCount = *getScoreCount();
-	for (int i = 0; i < scoreCount; i++)
+	for (int i = 1; i <= scoreCount; i++)
 	{
 		Score* s = queryScore(i);
 		if (!s)

@@ -1,21 +1,21 @@
-ï»¿/*
+/*
 Home View
 */
 #include "../../include/main.h"
 
 static void printMenu() {
 	system("cls");
-	printf("- è¿åŠ¨ä¼šç®¡ç†ç³»ç»Ÿ -\n");
-	printf("1. å•ä½ä¿¡æ¯ç®¡ç†\n");
-	printf("2. è¿åŠ¨å‘˜ä¿¡æ¯ç®¡ç†\n");
-	printf("3. æ¯”èµ›é¡¹ç›®ç®¡ç†\n");
-	printf("4. å‚èµ›ä¿¡æ¯ç®¡ç†\n");
-	printf("5. ç§©åºå†Œè‡ªåŠ¨ç”Ÿæˆ\n");
-	printf("6. æ¯”èµ›æˆç»©ç®¡ç†\n");
-	printf("7. æ•°æ®å¯¼å…¥å¯¼å‡º\n");
-	printf("8. ç³»ç»Ÿæ§åˆ¶é¢æ¿\n");
-	printf("0. é€€å‡ºç®¡ç†ç³»ç»Ÿ\n");
-	printf("è¯·è¾“å…¥æŒ‡ä»¤ï¼š");
+	printf("- ÔË¶¯»á¹ÜÀíÏµÍ³ -\n");
+	printf("1. µ¥Î»ĞÅÏ¢¹ÜÀí\n");
+	printf("2. ÔË¶¯Ô±ĞÅÏ¢¹ÜÀí\n");
+	printf("3. ±ÈÈüÏîÄ¿¹ÜÀí\n");
+	printf("4. ²ÎÈüĞÅÏ¢¹ÜÀí\n");
+	printf("5. ÖÈĞò²á×Ô¶¯Éú³É\n");
+	printf("6. ±ÈÈü³É¼¨¹ÜÀí\n");
+	printf("7. Êı¾İµ¼Èëµ¼³ö\n");
+	printf("8. ÏµÍ³¿ØÖÆÃæ°å\n");
+	printf("0. ÍË³ö¹ÜÀíÏµÍ³\n");
+	printf("ÇëÊäÈëÖ¸Áî£º");
 }
  
 void homeView() {
@@ -23,7 +23,7 @@ void homeView() {
 	do {
 		printMenu();
 		scanf_s(" %c", &op);
-		// æ¸…ç©ºè¾“å…¥ç¼“å†²åŒº
+		// Çå¿ÕÊäÈë»º³åÇø
 		while (getchar() != '\n');
 		printf("\n");
 		switch (op) {
@@ -52,12 +52,12 @@ void homeView() {
 			settingView();
 			break;
 		case '0':
-			printf("é€€å‡ºç³»ç»Ÿ\n");
+			printf("ÍË³öÏµÍ³\n");
 			system("pause");
 			return;
 			break;
 		default:
-			printf("æœªçŸ¥æŒ‡ä»¤\n");
+			printf("Î´ÖªÖ¸Áî\n");
 			system("pause");
 		}
 	} while (1);
